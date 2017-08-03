@@ -18,7 +18,7 @@ body {
   line-height: 1.1;
   position: relative;
   margin: 0;
-  } 
+  }
 .quote:before, .quote:after {
   font-size: 6rem;
   line-height: 2.5rem;
@@ -56,7 +56,13 @@ body {
   content: ", ";
   font-style: normal;
 }
-
+.category {
+  font-style: italic;
+}
+.category:before {
+  content: ", Category: ";
+  font-style: italic;
+}
 #loadQuote {
   position: fixed;
   width: 12em;

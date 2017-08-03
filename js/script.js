@@ -4,7 +4,7 @@ document.getElementById('loadQuote').addEventListener("click", printQuote, false
 
 // created a variable to hold the contents of the div in the html. This variable
 // will be used in the printQuote function.
-var message = " ";
+var message = "";
 
 // created a function for the div in the html to print out the contents correctly.
 function print(quote) {
@@ -24,7 +24,7 @@ function printQuote() {
   randomQuote = getRandomQuote();
 
   message = '<p class="quote">' + randomQuote.quote + '</p>';
-  message += '<p class="source">' + randomQuote.source + '<span class="citation">' + randomQuote.citation + '</span><span class="year">' + randomQuote.year + '</span></p>';
+  message += '<p class="source">' + randomQuote.source + '<span class="citation">' + randomQuote.citation + '</span><span class="year">' + randomQuote.year + '</span><span class="category">' + randomQuote.category + '</pan></p>';
 
   print(message);
 }
