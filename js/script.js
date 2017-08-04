@@ -17,6 +17,15 @@ function print(quote) {
 	div.innerHTML = quote;
 }
 
+// create a random rgb color to be used as the backgound color.
+function randomColor() {
+	var color = 'rgb(' + (Math.floor(Math.random() * 256)) + ','
+										+ (Math.floor(Math.random() * 256)) + ','
+										+ (Math.floor(Math.random() * 256)) + ')';
+
+	return color;
+}
+
 // created a function to return a random index or number from the quotes array object.
 function getRandomQuote() {
   var randomArrayIndex = quotes[Math.floor(Math.random() * quotes.length)];
@@ -37,13 +46,22 @@ function getRandomQuote() {
   return spliceQuote;
 }
 
-// created a function to print a random quote from our quotes array object.
+// created a function to print a random quote from our quotes array object and
+// also change the background to a random color.
 function printQuote() {
   // gets a random quote from the array object and stores it in a variable
   randomQuote = getRandomQuote();
 
+	// fills the 'quote-box' div with the values of our randomly generated quote.
   message = '<p class="quote">' + randomQuote.quote + '</p>';
   message += '<p class="source">' + randomQuote.source + '<span class="citation">' + randomQuote.citation + '</span><span class="year">' + randomQuote.year + '</span><span class="category">' + randomQuote.category + '</pan></p>';
 
+	// prints the quote to our html page.
   print(message);
+
+	// generates a random color.
+	randomColor();
+
+	// changes the body background color to the newly generated color.
+	document.getElementById('bgcolor').style.backgroundColor = randomColor();
 }
