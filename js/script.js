@@ -65,3 +65,5 @@ function printQuote() {
 	// changes the body background color to the newly generated color.
 	document.getElementById('bgcolor').style.backgroundColor = randomColor();
 }
+
+var interval = setInterval(printQuote, 10000);
