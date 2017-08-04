@@ -66,4 +66,5 @@ function printQuote() {
 	document.getElementById('bgcolor').style.backgroundColor = randomColor();
 }
 
+// changes the quote and background color after a 10 second delay/interval
 var interval = setInterval(printQuote, 10000);
