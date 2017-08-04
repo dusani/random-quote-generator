@@ -64,6 +64,7 @@ function printQuote() {
 
 	// changes the body background color to the newly generated color.
 	document.getElementById('bgcolor').style.backgroundColor = randomColor();
+	document.getElementById('loadQuote').style.backgroundColor = randomColor();
 }
 
 // changes the quote and background color after a 10 second delay/interval
